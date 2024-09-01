@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+.main-container{
+    width: 80vw;
+    margin: auto;
+    column-count: 4;
+}
+.image-card{
+    padding: 10px;
+}
+img{
+    width: 100%;
+}
+.Lightbox{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: opacity .4s ease, visibility .4s ease , transform .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 100;
+}
+.Lightbox-On{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+   opacity: 1;
+   transform: scale(1);
+   visibility: visible;
+   background-color: black;
+   transition: opacity .4s ease, visibility .4s ease , transform .5s ease-in-out;
+    overflow: hidden;
+    z-index: 100;
+}
+.Lightbox-On img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+}
+.close-lightbox{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 5rem;
+    height: 5rem;
+    padding: 5px;
+    background-color: #000000dd;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
